@@ -13,10 +13,10 @@ export default function Navbar() {
   const [apistatus, setApistatus] = useState(false);
   const [search, setSearch] = useState("");
 
-  const [chartData, setChartData] = useState({
-    labels: [],
-    datasets: [],
-  });
+  // const [chartData, setChartData] = useState({
+  //   labels: [],
+  //   datasets: [],
+  // });
 
   const getResponse = async () => {
     const response = await axios.get("https://gdscdev.vercel.app/api");
@@ -44,26 +44,26 @@ export default function Navbar() {
   };
   useEffect(() => {
     getResponse();
-    setChartData({
-      labels: content.map((data) => data.title),
-      datasets: [
-        {
-          label: "ID ",
-          data: content.map((data) => data.id),
-          backgroundColor: [
-            "red",
-            "blue",
-            "green",
-            "yellow",
-            "brown",
-            "pink",
-            "grey",
-          ],
-          borderColor: "black",
-          borderWidth: 2,
-        },
-      ],
-    });
+    // setChartData({
+    //   labels: content.map((data) => data.title),
+    //   datasets: [
+    //     {
+    //       label: "ID ",
+    //       data: content.map((data) => data.id),
+    //       backgroundColor: [
+    //         "red",
+    //         "blue",
+    //         "green",
+    //         "yellow",
+    //         "brown",
+    //         "pink",
+    //         "grey",
+    //       ],
+    //       borderColor: "black",
+    //       borderWidth: 2,
+    //     },
+    //   ],
+    // });
   }, [content]);
   return (
     <div className="font-serif tracking-wider">
@@ -130,7 +130,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <PieChart chartData={chartData} />
+      {/* <PieChart chartData={chartData} /> */}
       <ContentList>
         {content.map((val, index) => {
           return (
