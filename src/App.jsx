@@ -131,7 +131,7 @@ export default function Navbar() {
         </div>
       </div>
       <PieChart chartData={chartData} />
-      <ContentList>
+      <ContentList id="my-div">
         {content.map((val, index) => {
           return (
             <EachItem
