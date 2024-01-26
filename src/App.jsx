@@ -11,7 +11,7 @@ export default function Navbar() {
   const [content, setContent] = useState([]);
   const [meta, setMeta] = useState(0);
   const [apistatus, setApistatus] = useState(false);
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
 
   const [chartData, setChartData] = useState({
     labels: [],
@@ -27,21 +27,21 @@ export default function Navbar() {
     console.log(content);
   };
 
-  const searchHandler = () => {
-    let pos = "";
-    console.log(content);
-    content.forEach((element) => {
-      let string = element.title;
-      console.log(string);
-      if (string.includes(search)) {
-        pos = element.title;
-      }
-    });
-    if (pos !== "") {
-      let access = document.getElementById(pos);
-      access.scrollIntoView({ behavior: "smooth" }, true);
-    }
-  };
+  // const searchHandler = () => {
+  //   let pos = "";
+  //   console.log(content);
+  //   content.forEach((element) => {
+  //     let string = element.title;
+  //     console.log(string);
+  //     if (string.includes(search)) {
+  //       pos = element.title;
+  //     }
+  //   });
+  //   if (pos !== "") {
+  //     let access = document.getElementById(pos);
+  //     access.scrollIntoView({ behavior: "smooth" }, true);
+  //   }
+  // };
   useEffect(() => {
     getResponse();
     setChartData({
@@ -66,7 +66,7 @@ export default function Navbar() {
     });
   }, [content]);
   return (
-    <div className="font-serif tracking-wider">
+    <div className="font-serif tracking-wider" id="outer-div">
       <div style={{ display: "flex" }} className="mt-5">
         <Heading
           style={{
@@ -131,7 +131,7 @@ export default function Navbar() {
         </div>
       </div>
       <PieChart chartData={chartData} />
-      <ContentList>
+      <ContentList id="my-div">
         {content.map((val, index) => {
           return (
             <EachItem
