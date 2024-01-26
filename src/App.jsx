@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
+// import axios from "axios";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import PieChart from "./PieChart.jsx";
@@ -19,12 +19,12 @@ export default function Navbar() {
   });
 
   const getResponse = async () => {
-    const response = await axios.get("https://gdscdev.vercel.app/api");
-    console.log(response.data.content);
-    setContent(response.data.content.data);
-    setMeta(response.data.content.meta);
-    setApistatus(true);
-    console.log(content);
+    // const response = await axios.get("https://gdscdev.vercel.app/api");
+    // console.log(response.data.content);
+    // setContent(response.data.content.data);
+    // setMeta(response.data.content.meta);
+    // setApistatus(true);
+    // console.log(content);
   };
 
   const searchHandler = () => {
