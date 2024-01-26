@@ -76,7 +76,7 @@ export default function Navbar() {
             color: "black",
           }}
         >
-          <strong>GDSC ASSIGNMENT</strong>
+          <strong>CONVO CONNECT</strong>
         </Heading>
 
         <div className="mb-3 w-[20%] inline-block ml-5">

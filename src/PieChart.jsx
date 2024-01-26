@@ -8,9 +8,9 @@ export default function PieChart({ chartData }) {
         height: "60%",
         width: "40%",
         marginLeft: "30%",
-        backgroundColor: "#0093E9",
-        backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
-        color: "white",
+        backgroundColor: "#233023",
+        // backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+        color: "black",
       }}
     >
       <h2 style={{ textAlign: "center", color: "black", marginBottom: "5px" }}>
